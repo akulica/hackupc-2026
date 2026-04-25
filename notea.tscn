@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://wn5yr6tggo73"]
+[gd_scene format=3 uid="uid://dugaxgo3esll2"]
 
-[ext_resource type="Script" uid="uid://cbyq07yqsb58" path="res://scripts/test.gd" id="1_wn01w"]
-[ext_resource type="Texture2D" uid="uid://5hackqjg0x3s" path="res://assets/rocks/rock0.png" id="2_wn01w"]
+[ext_resource type="Script" uid="uid://cbyq07yqsb58" path="res://scripts/test.gd" id="1_1e1dx"]
+[ext_resource type="Texture2D" uid="uid://dkegbmd0c7f7v" path="res://assets/rocks/rock3.png" id="2_10x6g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uh7m"]
 
-[node name="notew" type="StaticBody2D" unique_id=302340140]
-script = ExtResource("1_wn01w")
+[node name="notea" type="StaticBody2D" unique_id=302340140]
+script = ExtResource("1_1e1dx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1452372998]
 position = Vector2(44, 31)
 shape = SubResource("RectangleShape2D_8uh7m")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1136955250]
-texture = ExtResource("2_wn01w")
+texture = ExtResource("2_10x6g")
 
 [node name="Timer" type="Timer" parent="." unique_id=2048985272]
 wait_time = 0.4

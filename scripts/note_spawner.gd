@@ -14,30 +14,35 @@ signal note4
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("notew"):
 		instantiate_note(0)
-	if Input.is_action_just_pressed("notee"):
-		instantiate_note(1)
-	if Input.is_action_just_pressed("noted"):
-		instantiate_note(2)
-	if Input.is_action_just_pressed("notea"):
-		instantiate_note(3)
 	if Input.is_action_just_pressed("noteq"):
+		instantiate_note(1)
+	if Input.is_action_just_pressed("notea"):
+		instantiate_note(2)
+	if Input.is_action_just_pressed("noted"):
+		instantiate_note(3)
+	if Input.is_action_just_pressed("notee"):
 		instantiate_note(4)
 	
 func instantiate_note(button: int) -> void:
-	var node = preload("res://note.tscn").instantiate()
-	node.dir = -Vector2(sin(PI-(float(button)*2./5.*PI)),cos(((float(button)*2./5.*PI))))
-	add_child(node)
+	var node
 	if button==0:
+		node = preload("res://notew.tscn").instantiate()
 		emit_signal("note0")
 	else: if button==1:
+		node = preload("res://notee.tscn").instantiate()
 		emit_signal("note1")
 	else: if button==2:
+		node = preload("res://noted.tscn").instantiate()
 		emit_signal("note2")
 	else: if button==3:
+		node = preload("res://notea.tscn").instantiate()
 		emit_signal("note3")
 	else: if button==4:
+		node = preload("res://noteq.tscn").instantiate()
 		emit_signal("note4")
-
+	node.dir = -Vector2(sin(PI-(float(button)*2./5.*PI)),cos(((float(button)*2./5.*PI))))
+	node.state = button
+	add_child(node)
 func _on_timer_timeout() -> void:
 	instantiate_note(array[notenum])
 	if notenum<array.size()-1:
