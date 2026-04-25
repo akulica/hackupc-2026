@@ -9,3 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position+=dir*movement_speed*delta
+
+
+func _on_timer_timeout() -> void:
+	self.queue_free()
