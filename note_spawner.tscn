@@ -4,3 +4,9 @@
 
 [node name="note spawner" type="Node2D" unique_id=1500124886]
 script = ExtResource("1_dsjd3")
+
+[node name="Timer" type="Timer" parent="." unique_id=326680032]
+wait_time = 0.156
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
