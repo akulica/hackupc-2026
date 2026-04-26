@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dotwe0somi3x4"]
+
+[ext_resource type="Script" uid="uid://jdo04ftxdrjo" path="res://dialog.gd" id="1_4uc3s"]
+[ext_resource type="Texture2D" uid="uid://co84ui12nfn71" path="res://assets/table.png" id="1_7voku"]
+[ext_resource type="Texture2D" uid="uid://c25skcvh5g62l" path="res://assets/tarotup.png" id="3_rxi5t"]
+[ext_resource type="Texture2D" uid="uid://dlqep0wbehbs2" path="res://assets/tarotdown.png" id="4_37fld"]
+
+[node name="tarotlady" type="Control" unique_id=1449988091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4uc3s")
+
+[node name="table" type="Sprite2D" parent="." unique_id=1603133751]
+texture = ExtResource("1_7voku")
+centered = false
+
+[node name="Label" type="Label" parent="." unique_id=1502530037]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "dummy text"
+
+[node name="tarotup" type="Sprite2D" parent="." unique_id=2069618814]
+visible = false
+z_index = 10
+texture = ExtResource("3_rxi5t")
+centered = false
+
+[node name="tarotdown" type="Sprite2D" parent="." unique_id=284428398]
+z_index = 5
+texture = ExtResource("4_37fld")
+centered = false

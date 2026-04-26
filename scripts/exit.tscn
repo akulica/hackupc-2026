@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://cxvtjjaumebdn"]
+
+[ext_resource type="Script" uid="uid://dvissrytc0v7v" path="res://character_body_2d.gd" id="1_mlcv5"]
+[ext_resource type="Texture2D" uid="uid://0mxxxqpwwix3" path="res://assets/attack/Untitled113_20260425173203.webp" id="2_g0e5m"]
+[ext_resource type="Texture2D" uid="uid://c56ye1j13ul6n" path="res://assets/house.png" id="2_pinn1"]
+[ext_resource type="Texture2D" uid="uid://cbbys0hf3aj8i" path="res://assets/npc.png" id="3_d0uvg"]
+[ext_resource type="Texture2D" uid="uid://5bfy2wor4fxh" path="res://assets/attack/Untitled113_20260425173210.webp" id="3_w1eri"]
+[ext_resource type="Texture2D" uid="uid://be6dueen0lyd2" path="res://assets/attack/Untitled113_20260425173215.webp" id="4_q20c8"]
+[ext_resource type="Texture2D" uid="uid://3lahsv5cqjmd" path="res://assets/attack/Untitled113_20260425173220.webp" id="5_1lasf"]
+[ext_resource type="Texture2D" uid="uid://ccwqnixigtgki" path="res://assets/attack/Untitled113_20260425173224.webp" id="6_657es"]
+[ext_resource type="Texture2D" uid="uid://ddhp3k4nmk5k3" path="res://assets/attack/Untitled113_20260425173230.webp" id="7_me3or"]
+[ext_resource type="Texture2D" uid="uid://dx5vs5d6gqjoq" path="res://assets/attack/Untitled113_20260425173235.webp" id="8_kct8o"]
+[ext_resource type="Texture2D" uid="uid://j8t8x721fjc6" path="res://assets/attack/Untitled113_20260425173239.webp" id="9_hmkna"]
+[ext_resource type="Texture2D" uid="uid://coq4alpqkxnmq" path="res://assets/attack/Untitled113_20260425173242.webp" id="10_ku480"]
+[ext_resource type="Texture2D" uid="uid://cj0vs673cyhpn" path="res://assets/walk/Untitled112_20260425144853.webp" id="11_msrbg"]
+[ext_resource type="Texture2D" uid="uid://cbf63ne857yax" path="res://assets/walk/Untitled112_20260425144856.webp" id="12_nrowg"]
+[ext_resource type="Texture2D" uid="uid://bd13a86ns4xmp" path="res://assets/walk/Untitled112_20260425144859.webp" id="13_qvfln"]
+[ext_resource type="Texture2D" uid="uid://c1id86ctxq47" path="res://assets/walk/Untitled112_20260425144902.webp" id="14_y3i25"]
+[ext_resource type="Texture2D" uid="uid://cbie23ivbvtv0" path="res://assets/walk/Untitled112_20260425144905.webp" id="15_hbuwq"]
+[ext_resource type="Texture2D" uid="uid://catoirgwxy426" path="res://assets/walk/Untitled112_20260425144908.webp" id="16_024tp"]
+[ext_resource type="Texture2D" uid="uid://5eohdel54gl2" path="res://assets/walk/Untitled112_20260425144910.webp" id="17_ugch3"]
+[ext_resource type="Texture2D" uid="uid://dejjnb4xn71vp" path="res://assets/stand.webp" id="18_41pvx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1svla"]
+radius = 60.0
+height = 518.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33vth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g0e5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w1eri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q20c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1lasf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_657es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_me3or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kct8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hmkna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ku480")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_msrbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nrowg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qvfln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_y3i25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hbuwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_024tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ugch3")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_41pvx")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ots34"]
+size = Vector2(199, 399)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aj1oh"]
+size = Vector2(353, 236)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g0e5m"]
+size = Vector2(253, 1093)
+
+[node name="exit" type="Node2D" unique_id=1603741356]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1677131336]
+position = Vector2(600, 700)
+script = ExtResource("1_mlcv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=557108623]
+z_index = 10
+position = Vector2(0, 35)
+shape = SubResource("CapsuleShape2D_1svla")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=865149457]
+z_index = 10
+sprite_frames = SubResource("SpriteFrames_33vth")
+animation = &"run"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=533531541]
+texture = ExtResource("2_pinn1")
+centered = false
+
+[node name="npc" type="Area2D" parent="." unique_id=723895229]
+position = Vector2(800, 664)
+
+[node name="npc sprite" type="Sprite2D" parent="npc" unique_id=1419052682]
+position = Vector2(0, 6)
+texture = ExtResource("3_d0uvg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc" unique_id=2051382619]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_ots34")
+
+[node name="well" type="Area2D" parent="." unique_id=394961991]
+position = Vector2(1786, 664)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="well" unique_id=1422526259]
+position = Vector2(-1403.5, 75)
+shape = SubResource("RectangleShape2D_aj1oh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=734375768]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=664176002]
+position = Vector2(1813.5, 536.5)
+shape = SubResource("RectangleShape2D_g0e5m")
+
+[connection signal="body_entered" from="npc" to="CharacterBody2D" method="_on_npc_body_entered"]
+[connection signal="body_exited" from="npc" to="CharacterBody2D" method="_on_npc_body_exited"]
+[connection signal="body_entered" from="well" to="CharacterBody2D" method="_on_well_body_entered"]
+[connection signal="body_exited" from="well" to="CharacterBody2D" method="_on_well_body_exited"]
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]

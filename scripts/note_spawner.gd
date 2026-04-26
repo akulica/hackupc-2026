@@ -22,6 +22,8 @@ func _process(delta: float) -> void:
 		instantiate_note(3)
 	if Input.is_action_just_pressed("notee"):
 		instantiate_note(4)
+	if Input.is_action_just_pressed("exit"):
+		get_tree().change_scene_to_file("res://exit.tscn")
 	
 func instantiate_note(button: int) -> void:
 	var node
@@ -29,16 +31,16 @@ func instantiate_note(button: int) -> void:
 		node = preload("res://notew.tscn").instantiate()
 		emit_signal("note0")
 	else: if button==1:
-		node = preload("res://notee.tscn").instantiate()
+		node = preload("res://noteq.tscn").instantiate()
 		emit_signal("note1")
 	else: if button==2:
-		node = preload("res://noted.tscn").instantiate()
+		node = preload("res://notea.tscn").instantiate()
 		emit_signal("note2")
 	else: if button==3:
-		node = preload("res://notea.tscn").instantiate()
+		node = preload("res://noted.tscn").instantiate()
 		emit_signal("note3")
 	else: if button==4:
-		node = preload("res://noteq.tscn").instantiate()
+		node = preload("res://notee.tscn").instantiate()
 		emit_signal("note4")
 	node.dir = -Vector2(sin(PI-(float(button)*2./5.*PI)),cos(((float(button)*2./5.*PI))))
 	node.state = button
