@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://uepjvnbmr815"]
+
+[ext_resource type="Script" uid="uid://drhyugfxllghi" path="res://gameover.gd" id="1_tpdqf"]
+[ext_resource type="Texture2D" uid="uid://dl5be6qf4b8ej" path="res://assets/gameover.png" id="2_eeur3"]
+
+[node name="gameover" type="Node2D" unique_id=2062732607]
+script = ExtResource("1_tpdqf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1255655113]
+texture = ExtResource("2_eeur3")
+centered = false
